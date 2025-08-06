@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* iOS-style scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* iOS-style selection */
+::selection {
+  background-color: rgba(0, 122, 255, 0.2);
+}
+
+/* Base styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+  background-color: #F2F2F7;
+  color: #1C1C1E;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* iOS button styles */
+.ios-button {
+  @apply px-6 py-3 rounded-ios font-medium transition-all duration-200 active:scale-95;
+}
+
+.ios-button-primary {
+  @apply bg-ios-blue text-white shadow-ios;
+}
+
+.ios-button-secondary {
+  @apply bg-ios-gray-200 text-ios-gray-900;
+}
+
+/* iOS card styles */
+.ios-card {
+  @apply bg-surface rounded-ios-lg shadow-ios p-4;
+}
+
+/* iOS input styles */
+.ios-input {
+  @apply w-full px-4 py-3 rounded-ios bg-ios-gray-100 border-0 focus:bg-surface focus:shadow-ios outline-none transition-all duration-200;
+}
+
+/* React Calendar iOS styling */
+.react-calendar {
+  @apply w-full bg-surface rounded-ios-lg shadow-ios border-0 font-sf;
+}
+
+.react-calendar__navigation {
+  @apply mb-4;
+}
+
+.react-calendar__navigation button {
+  @apply text-ios-blue text-lg font-medium p-2 bg-transparent border-0;
+}
+
+.react-calendar__tile {
+  @apply p-3 text-center border-0 bg-transparent rounded-ios transition-colors duration-200;
+}
+
+.react-calendar__tile:hover {
+  @apply bg-ios-gray-100;
+}
+
+.react-calendar__tile--active {
+  @apply bg-ios-blue text-white;
+}
+
+.react-calendar__tile--now {
+  @apply bg-ios-orange text-white;
+}
+
+/* Quill editor iOS styling */
+.ql-editor {
+  @apply font-sf text-base leading-relaxed;
+}
+
+.ql-toolbar {
+  @apply border-ios-gray-200 rounded-t-ios;
+}
+
+.ql-container {
+  @apply border-ios-gray-200 rounded-b-ios;
+}
